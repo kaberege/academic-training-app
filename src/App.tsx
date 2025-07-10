@@ -1,5 +1,5 @@
-import LessonPage from "./pages/LessonPage";
+import { Outlet } from "react-router";
 
 export default function App() {
-  return <LessonPage />;
+  return <Outlet />;
 }

@@ -1,4 +1,5 @@
 export interface LessonContentItem {
+  id?: string;
   type: "heading" | "paragraph" | "list";
   level?: 1 | 2 | 3;
   text?: string;

@@ -1,33 +1,26 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { RouterProvider, createBrowserRouter, Navigate } from "react-router";
+import LessonPage from "./pages/LessonPage";
 import "./index.css";
-import App from "./App.tsx";
-import ErrorPage from "./components/ErrorPage.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "",
-        element: <div>One</div>,
-      },
-      {
-        path: "details/:id",
-        element: <div>Two</div>,
-      },
-    ],
+    element: <Navigate to="/lesson/0" replace />,
+  },
+  {
+    path: "/lesson/:sectionIndex",
+    element: <LessonPage />,
   },
   {
     path: "*",
-    element: <ErrorPage />,
+    element: <Navigate to="/lesson/0" replace />,
   },
 ]);
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </React.StrictMode>
 );

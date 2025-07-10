@@ -1,133 +1,142 @@
 {
   "lessonId": "child-psychology-tutoring-01",
   "title": "Child Psychology and Effective Methods of Tutoring",
-  "audience": "Academic Mentors and Tutors",
   "description": "This lesson introduces the fundamentals of child psychology and shows how it connects to tutoring practices that are developmentally appropriate and effective.",
-  "objectives": [
-    "Understand basic psychological theories of child development",
-    "Apply emotional and cognitive principles to tutoring",
-    "Avoid harmful and ineffective tutoring habits"
-  ],
-  "content": [
+  "sections": [
     {
-      "type": "heading",
-      "level": 1,
-      "text": "Child Psychology and Effective Methods of Tutoring"
-    },
-    {
-      "type": "paragraph",
-      "text": "Understanding the mental and emotional development of children is crucial for tutors. Child psychology provides essential insights into how children think, feel, and learn. When tutors align their methods with psychological principles, they become more effective, supportive, and empowering."
-    },
-    {
-      "type": "heading",
-      "level": 1,
-      "text": "1. Fundamentals of Child Psychology"
-    },
-    {
-      "type": "heading",
-      "level": 2,
-      "text": "1.1 Why Understanding Child Psychology Matters"
-    },
-    {
-      "type": "paragraph",
-      "text": "Children are not just 'miniature adults.' Their brains, emotions, and social awareness are in active development. Tutors who understand child psychology are better positioned to:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        "Build trust with students",
-        "Recognize and adapt to emotional needs",
-        "Design learning experiences aligned with developmental stages"
+      "title": "Introduction",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Understanding the mental and emotional development of children is crucial for tutors. Child psychology provides essential insights into how children think, feel, and learn. When tutors align their methods with psychological principles, they become more effective, supportive, and empowering."
+        }
       ]
     },
     {
-      "type": "heading",
-      "level": 3,
-      "text": "1.1.1 Key Psychological Theories Relevant to Tutoring"
+      "title": "1. Fundamentals of Child Psychology",
+      "blocks": []
     },
     {
-      "type": "list",
-      "ordered": true,
-      "items": [
-        "Piaget’s Cognitive Development Theory – Children pass through different learning stages: sensorimotor, preoperational, concrete operational, and formal operational.",
-        "Vygotsky’s Zone of Proximal Development – Children learn best with guided support just above their current ability.",
-        "Erikson’s Psychosocial Stages – Focuses on emotional and social development (e.g., autonomy, initiative, competence)."
+      "title": "1.1 Why Understanding Child Psychology Matters",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Children are not just 'miniature adults.' Their brains, emotions, and social awareness are in active development. Tutors who understand child psychology are better positioned to:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Build trust with students",
+            "Recognize and adapt to emotional needs",
+            "Design learning experiences aligned with developmental stages"
+          ]
+        }
       ]
     },
     {
-      "type": "heading",
-      "level": 2,
-      "text": "1.2 Characteristics of Learners by Age Group"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        "Early childhood (4–7 years): Curious, need concrete examples, short attention spans.",
-        "Middle childhood (8–11 years): Begin logical thinking, enjoy collaboration, need praise.",
-        "Adolescents (12+): Abstract thinkers, seek autonomy, sensitive to peer perception."
+      "title": "1.1.1 Key Psychological Theories Relevant to Tutoring",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Piaget’s Cognitive Development Theory – Children pass through different learning stages: sensorimotor, preoperational, concrete operational, and formal operational.",
+            "Vygotsky’s Zone of Proximal Development – Children learn best with guided support just above their current ability.",
+            "Erikson’s Psychosocial Stages – Focuses on emotional and social development (e.g., autonomy, initiative, competence)."
+          ]
+        }
       ]
     },
     {
-      "type": "heading",
-      "level": 1,
-      "text": "2. Effective Tutoring Methods Aligned with Child Psychology"
-    },
-    { "type": "heading", "level": 2, "text": "2.1 Core Tutoring Strategies" },
-    {
-      "type": "heading",
-      "level": 3,
-      "text": "2.1.1 Empathy and Emotional Safety"
-    },
-    {
-      "type": "paragraph",
-      "text": "A tutor must create an emotionally safe space. Children learn best when they feel:"
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        "Accepted without judgment",
-        "Encouraged to ask questions",
-        "Supported during mistakes"
+      "title": "1.2 Characteristics of Learners by Age Group",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Early childhood (4–7 years): Curious, need concrete examples, short attention spans.",
+            "Middle childhood (8–11 years): Begin logical thinking, enjoy collaboration, need praise.",
+            "Adolescents (12+): Abstract thinkers, seek autonomy, sensitive to peer perception."
+          ]
+        }
       ]
     },
-    { "type": "heading", "level": 2, "text": "2.2 Techniques That Work" },
-    { "type": "heading", "level": 3, "text": "🎯 Instructional Strategies" },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        "Use age-appropriate examples and language",
-        "Break lessons into short, focused activities",
-        "Incorporate visuals, stories, or games",
-        "Regularly check for understanding",
-        "Provide consistent feedback"
+      "title": "2. Effective Tutoring Methods Aligned with Child Psychology",
+      "blocks": []
+    },
+    {
+      "title": "2.1 Core Tutoring Strategies",
+      "blocks": []
+    },
+    {
+      "title": "2.1.1 Empathy and Emotional Safety",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A tutor must create an emotionally safe space. Children learn best when they feel:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Accepted without judgment",
+            "Encouraged to ask questions",
+            "Supported during mistakes"
+          ]
+        }
       ]
     },
-    { "type": "paragraph", "text": "Numbered process for effective tutoring:" },
     {
-      "type": "list",
-      "ordered": true,
-      "items": [
-        "Assess the child’s current understanding",
-        "Set a small learning goal",
-        "Explain the concept using familiar ideas",
-        "Guide them through examples",
-        "Allow independent practice",
-        "Review and praise progress"
+      "title": "2.2 Techniques That Work",
+      "blocks": []
+    },
+    {
+      "title": "🎯 Instructional Strategies",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Use age-appropriate examples and language",
+            "Break lessons into short, focused activities",
+            "Incorporate visuals, stories, or games",
+            "Regularly check for understanding",
+            "Provide consistent feedback"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Numbered process for effective tutoring:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Assess the child’s current understanding",
+            "Set a small learning goal",
+            "Explain the concept using familiar ideas",
+            "Guide them through examples",
+            "Allow independent practice",
+            "Review and praise progress"
+          ]
+        }
       ]
     },
-    { "type": "heading", "level": 2, "text": "2.3 What to Avoid" },
     {
-      "type": "list",
-      "ordered": false,
-      "items": [
-        "Comparing one child to another",
-        "Using punishment or shame",
-        "Overloading with too much information at once",
-        "Ignoring emotional cues or frustration"
+      "title": "2.3 What to Avoid",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Comparing one child to another",
+            "Using punishment or shame",
+            "Overloading with too much information at once",
+            "Ignoring emotional cues or frustration"
+          ]
+        }
       ]
     }
   ],
