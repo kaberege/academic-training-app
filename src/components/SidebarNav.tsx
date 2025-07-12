@@ -46,7 +46,7 @@ export default function SidebarNav() {
             <input
               type="radio"
               readOnly
-              checked={completedIds.has(lesson.sections.length)}
+              checked={completedIds.has(lesson.sections.length + 1)}
             />
             Quiz
           </NavLink>

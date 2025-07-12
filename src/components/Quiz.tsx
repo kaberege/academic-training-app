@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useLessonStore } from "../store/lessonStore";
 import { type QuizQuestion } from "../types";
 
 export default function Quiz({ questions }: { questions: QuizQuestion[] }) {
+  const { lesson, markComplete } = useLessonStore();
   const [score, setScore] = useState<number | null>(null);
   const [answers, setAnswers] = useState<number[]>(
     Array(questions.length).fill(-1)
@@ -32,6 +34,9 @@ export default function Quiz({ questions }: { questions: QuizQuestion[] }) {
       }),
     }).then((res) => console.log("✅ Mock POST sent.", res));
   };
+
+  if (!lesson || !lesson.sections)
+    return <p className="p-4 text-center text-sm text-zinc-800">No content</p>;
 
   return (
     <div className="mt-1">
@@ -74,7 +79,10 @@ export default function Quiz({ questions }: { questions: QuizQuestion[] }) {
       ))}
       {score === null ? (
         <button
-          onClick={handleSubmit}
+          onClick={() => {
+            markComplete(lesson.sections.length + 1);
+            handleSubmit();
+          }}
           className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 cursor-pointer"
         >
           Submit Quiz
