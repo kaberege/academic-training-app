@@ -1,21 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter, Navigate } from "react-router";
-import LessonPage from "./pages/LessonPage";
+import LessonPage from "./components/LessonPage";
+import ErrorPage from "./components/ErrorPage";
+import App from "./App";
 import "./index.css";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/lesson/0" replace />,
+    element: <App />,
+    children: [
+      {
+        path: "",
+        element: <Navigate to="/lesson/0" replace />,
+      },
+      {
+        path: "/lesson/:sectionIndex",
+        element: <LessonPage />,
+      },
+    ],
   },
-  {
-    path: "/lesson/:sectionIndex",
-    element: <LessonPage />,
-  },
+
   {
     path: "*",
-    element: <Navigate to="/lesson/0" replace />,
+    element: <ErrorPage />,
   },
 ]);
 

@@ -34,7 +34,7 @@ export default function Quiz({ questions }: { questions: QuizQuestion[] }) {
   };
 
   return (
-    <div className="mt-10">
+    <div className="mt-1">
       <h2 className="text-xl font-bold mb-4">Quiz</h2>
       {questions.map((q, i) => (
         <div key={q.questionId} className="mb-6">
@@ -75,7 +75,7 @@ export default function Quiz({ questions }: { questions: QuizQuestion[] }) {
       {score === null ? (
         <button
           onClick={handleSubmit}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 cursor-pointer"
         >
           Submit Quiz
         </button>

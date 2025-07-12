@@ -1,5 +1,6 @@
 import { NavLink, useParams } from "react-router";
 import { useLessonStore } from "../store/lessonStore";
+//import { IoMdArrowDropright } from "react-icons/io";
 
 export default function SidebarNav() {
   const { lesson, completedIds } = useLessonStore();
@@ -9,23 +10,25 @@ export default function SidebarNav() {
   if (!lesson) return null;
 
   return (
-    <aside className="hidden md:block w-64 h-screen overflow-y-auto bg-gray-100 p-4 sticky top-0">
-      <h2 className="text-lg font-bold mb-4">Outline</h2>
-      <ul className="space-y-2">
+    <aside className="hidden md:block w-64 bg-white">
+      <h2 className="text-base text-white font-bold py-2 pl-2 pr-4 bg-blue-700 truncate">
+        {lesson.title}
+      </h2>
+      <ul className="h-96 overflow-y-auto text-base">
         {lesson.sections.map((section, index) => (
           <li key={index}>
             <NavLink
               to={`/lesson/${index}`}
               className={({ isActive }) =>
-                `flex items-center gap-2 p-1 rounded ${
+                `flex items-center justify-between gap-4 py-2 pl-4 pr-1 border-b border-b-zinc-400 ${
                   isActive || index === activeIndex
                     ? "bg-blue-100 text-blue-700 font-semibold"
                     : "text-gray-700"
                 }`
               }
             >
+              <span className="truncate">{section.title}</span>
               <input type="radio" readOnly checked={completedIds.has(index)} />
-              {section.title}
             </NavLink>
           </li>
         ))}
@@ -33,7 +36,7 @@ export default function SidebarNav() {
           <NavLink
             to={`/lesson/${lesson.sections.length}`}
             className={({ isActive }) =>
-              `flex items-center gap-2 p-1 rounded ${
+              `flex items-center gap-2 py-2 pl-4 pr-1  rounded text-base border-b border-b-zinc-400 ${
                 isActive || activeIndex === lesson.sections.length
                   ? "bg-blue-100 text-blue-700 font-semibold"
                   : "text-gray-700"
