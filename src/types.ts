@@ -1,10 +1,27 @@
-export interface LessonContentItem {
+/* export interface LessonContentItem {
   id?: string;
   type: "heading" | "paragraph" | "list";
-  level?: 1 | 2 | 3;
+  level?: 1 | 2 | 3 | 4;
   text?: string;
   items?: string[];
   ordered?: boolean;
+} */
+
+interface ListItem {
+  type: "list";
+  ordered: boolean;
+  items: string[];
+}
+interface ParagraphItem {
+  type: "paragraph";
+  text: string;
+}
+type ContentItem = ParagraphItem | ListItem;
+
+interface ContentBlock {
+  level?: number;
+  title: string;
+  items: ContentItem[];
 }
 
 export interface QuizQuestion {
@@ -22,6 +39,6 @@ export interface LessonData {
   audience: string;
   description: string;
   objectives: string[];
-  content: LessonContentItem[];
+  content: ContentBlock[];
   quiz: QuizQuestion[];
 }

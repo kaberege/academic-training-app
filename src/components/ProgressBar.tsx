@@ -5,7 +5,7 @@ export default function ProgressBar({
   value: number;
   max: number;
 }) {
-  const percent = Math.round((value / max) * 100);
+  const percent = Math.round(((value + 1) / max) * 100);
   return (
     <div className="w-full bg-gray-200 rounded-full h-1 my-4">
       <div

@@ -1,6 +1,5 @@
 import { NavLink, useParams } from "react-router";
 import { useLessonStore } from "../store/lessonStore";
-//import { IoMdArrowDropright } from "react-icons/io";
 
 export default function SidebarNav() {
   const { lesson, completedIds } = useLessonStore();
@@ -15,7 +14,7 @@ export default function SidebarNav() {
         {lesson.title}
       </h2>
       <ul className="h-96 overflow-y-auto text-base">
-        {lesson.sections.map((section, index) => (
+        {lesson.content.map((section, index) => (
           <li key={index}>
             <NavLink
               to={`/lesson/${index}`}
@@ -23,7 +22,7 @@ export default function SidebarNav() {
                 `flex items-center justify-between gap-4 py-2 pl-4 pr-1 border-b border-b-zinc-400 ${
                   isActive || index === activeIndex
                     ? "bg-blue-100 text-blue-700 font-semibold"
-                    : "text-gray-700"
+                    : "text-zinc-700"
                 }`
               }
             >
@@ -34,19 +33,19 @@ export default function SidebarNav() {
         ))}
         <li>
           <NavLink
-            to={`/lesson/${lesson.sections.length}`}
+            to={`/lesson/${lesson.content.length}`}
             className={({ isActive }) =>
               `flex items-center gap-2 py-2 pl-4 pr-1  rounded text-base border-b border-b-zinc-400 ${
-                isActive || activeIndex === lesson.sections.length
+                isActive || activeIndex === lesson.content.length
                   ? "bg-blue-100 text-blue-700 font-semibold"
-                  : "text-gray-700"
+                  : "text-zinc-700"
               }`
             }
           >
             <input
               type="radio"
               readOnly
-              checked={completedIds.has(lesson.sections.length + 1)}
+              checked={completedIds.has(lesson.content.length)}
             />
             Quiz
           </NavLink>

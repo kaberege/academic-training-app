@@ -28,7 +28,7 @@ export default function App() {
                 to="#"
                 className={({ isActive }) =>
                   `${
-                    isActive ? "text-gray-800" : "text-blue-700"
+                    isActive ? "text-zinc-800" : "text-blue-700"
                   } hover:text-blue-700 transition-colors`
                 }
               >
@@ -40,7 +40,7 @@ export default function App() {
                 to="#"
                 className={({ isActive }) =>
                   `${
-                    isActive ? "text-gray-800" : "text-blue-700"
+                    isActive ? "text-zinc-800" : "text-blue-700"
                   } hover:text-blue-700 transition-colors`
                 }
               >
@@ -63,7 +63,7 @@ export default function App() {
           </div>
         </div>
       </header>
-      <main className="mt-2 px-8 sm:px-10">
+      <main className="mt-2 px-8 sm:px-10 max-h-screen overflow-y-auto">
         <Outlet />
       </main>
     </div>

@@ -35,11 +35,11 @@ export default function Quiz({ questions }: { questions: QuizQuestion[] }) {
     }).then((res) => console.log("✅ Mock POST sent.", res));
   };
 
-  if (!lesson || !lesson.sections)
+  if (!lesson || !lesson.content)
     return <p className="p-4 text-center text-sm text-zinc-800">No content</p>;
 
   return (
-    <div className="mt-1">
+    <div className="mt-1 pb-20">
       <h2 className="text-xl font-bold mb-4">Quiz</h2>
       {questions.map((q, i) => (
         <div key={q.questionId} className="mb-6">
@@ -80,7 +80,7 @@ export default function Quiz({ questions }: { questions: QuizQuestion[] }) {
       {score === null ? (
         <button
           onClick={() => {
-            markComplete(lesson.sections.length + 1);
+            markComplete(lesson.content.length);
             handleSubmit();
           }}
           className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 cursor-pointer"

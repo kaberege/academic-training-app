@@ -1,4 +1,4 @@
-import { type LessonContentItem } from "../types";
+/* import { type LessonContentItem } from "../types";
 
 export const renderLessonBlock = (block: LessonContentItem, index: number) => {
   console.log(index);
@@ -29,3 +29,4 @@ export const renderLessonBlock = (block: LessonContentItem, index: number) => {
       return null;
   }
 };
+ */

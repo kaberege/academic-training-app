@@ -1,22 +1,5 @@
 import { create } from "zustand";
-
-export interface Section {
-  title: string;
-  blocks: {
-    type: "paragraph" | "list";
-    text?: string;
-    items?: string[];
-    ordered?: boolean;
-  }[];
-}
-
-export interface LessonData {
-  lessonId: string;
-  title: string;
-  description: string;
-  sections: Section[];
-  quiz: any[];
-}
+import { type LessonData } from "../types";
 
 interface LessonState {
   lesson: LessonData | null;
