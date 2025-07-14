@@ -1,39 +1,11 @@
-import { useState } from "react";
 import { useLessonStore } from "../store/lessonStore";
-import { type QuizQuestion } from "../types";
+import { type QuizQuestion } from "../interfaces/types";
+import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
+import { useNavigate } from "react-router";
 
 export default function Quiz({ questions }: { questions: QuizQuestion[] }) {
-  const { lesson, markComplete } = useLessonStore();
-  const [score, setScore] = useState<number | null>(null);
-  const [answers, setAnswers] = useState<number[]>(
-    Array(questions.length).fill(-1)
-  );
-
-  const handleSelect = (qIndex: number, optionIndex: number) => {
-    const copy = [...answers];
-    copy[qIndex] = optionIndex;
-    setAnswers(copy);
-  };
-
-  const handleSubmit = () => {
-    let correct = 0;
-    questions.forEach((q, i) => {
-      if (answers[i] === q.correctIndex) correct++;
-    });
-    setScore(correct);
-
-    fetch("https://jsonplaceholder.typicode.com/posts", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        userId: "abc123",
-        lessonId: "child-psychology-tutoring-01",
-        completedAt: new Date().toISOString(),
-        quizScore: correct,
-        quizTotal: questions.length,
-      }),
-    }).then((res) => console.log("✅ Mock POST sent.", res));
-  };
+  const navigate = useNavigate();
+  const { lesson } = useLessonStore();
 
   if (!lesson || !lesson.content)
     return <p className="p-4 text-center text-sm text-zinc-800">No content</p>;
@@ -50,48 +22,21 @@ export default function Quiz({ questions }: { questions: QuizQuestion[] }) {
             {q.options.map((opt, j) => (
               <li key={j}>
                 <label className="inline-flex items-center">
-                  <input
-                    type="radio"
-                    name={`q-${i}`}
-                    checked={answers[i] === j}
-                    onChange={() => handleSelect(i, j)}
-                    className="mr-2"
-                  />
+                  <input type="radio" name={`q-${i}`} className="mr-2" />
                   {opt}
                 </label>
               </li>
             ))}
           </ul>
-          {score !== null && (
-            <p
-              className={`mt-2 ${
-                answers[i] === q.correctIndex
-                  ? "text-green-600"
-                  : "text-red-600"
-              }`}
-            >
-              {answers[i] === q.correctIndex
-                ? "✅ Correct"
-                : `❌ Incorrect. ${q.explanation}`}
-            </p>
-          )}
         </div>
       ))}
-      {score === null ? (
-        <button
-          onClick={() => {
-            markComplete(lesson.content.length);
-            handleSubmit();
-          }}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 cursor-pointer"
-        >
-          Submit Quiz
-        </button>
-      ) : (
-        <p className="mt-4 font-semibold">
-          You scored {score}/{questions.length}
-        </p>
-      )}
+      <button
+        onClick={() => navigate(`/lesson/${lesson.content.length - 1}`)}
+        className="flex items-center justify-between space-x-1 border border-blue-600 bg-blue-100 text-zinc-900 hover:text-white text-base px-3 py-1.5 rounded hover:bg-blue-500 cursor-pointer"
+      >
+        <MdKeyboardDoubleArrowLeft size={23} />
+        Back
+      </button>
     </div>
   );
 }

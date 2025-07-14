@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { type LessonData } from "../types";
+import { type LessonData } from "../interfaces/types";
 
 interface LessonState {
   lesson: LessonData | null;

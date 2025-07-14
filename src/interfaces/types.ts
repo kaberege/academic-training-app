@@ -1,12 +1,3 @@
-/* export interface LessonContentItem {
-  id?: string;
-  type: "heading" | "paragraph" | "list";
-  level?: 1 | 2 | 3 | 4;
-  text?: string;
-  items?: string[];
-  ordered?: boolean;
-} */
-
 interface ListItem {
   type: "list";
   ordered: boolean;
