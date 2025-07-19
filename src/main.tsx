@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter, Navigate } from "react-router";
-import LessonPage from "./components/LessonPage";
+import LessonPage from "./components/lesson/LessonPage";
 import ErrorPage from "./components/ErrorPage";
 import App from "./App";
 import "./index.css";

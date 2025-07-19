@@ -1,5 +1,5 @@
 import { NavLink, useParams } from "react-router";
-import { useLessonStore } from "../store/lessonStore";
+import { useLessonStore } from "../../store/lessonStore";
 
 export default function SidebarNav() {
   const { lesson, completedIds } = useLessonStore();

@@ -1,5 +1,5 @@
-import { useLessonStore } from "../store/lessonStore";
-import { type QuizQuestion } from "../interfaces/types";
+import { useLessonStore } from "../../store/lessonStore";
+import { type QuizQuestion } from "../../interfaces/types";
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { useNavigate } from "react-router";
 

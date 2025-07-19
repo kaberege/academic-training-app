@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 import SidebarNav from "./SidebarNav";
-import Quiz from "./Quiz";
-import { useLessonStore } from "../store/lessonStore";
+import Quiz from "../quiz/Quiz";
+import { useLessonStore } from "../../store/lessonStore";
 import ProgressBar from "./ProgressBar";
 import OutlineBars from "./OutlineBars";
-import doc from "../assets/images/doc.png";
-import hp from "../assets/images/hp.png";
+import doc from "../../assets/images/doc.png";
+import hp from "../../assets/images/hp.png";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { LiaArrowsAltSolid } from "react-icons/lia";

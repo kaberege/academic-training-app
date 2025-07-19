@@ -245,7 +245,7 @@
         "Children learn best just beyond their current ability with guidance",
         "Intelligence is fixed from birth"
       ],
-      "correctIndex": 2,
+      "correctAnswer": "Children learn best just beyond their current ability with guidance",
       "explanation": "Vygotsky's theory emphasizes the importance of adult guidance in helping children learn slightly beyond their current capabilities."
     },
     {
@@ -258,7 +258,7 @@
         "Incorporate games and short tasks",
         "Assign independent research"
       ],
-      "correctIndex": 2,
+      "correctAnswer": "Incorporate games and short tasks",
       "explanation": "Young children learn best through play and short, interactive lessons."
     },
     {
@@ -271,7 +271,7 @@
         "Industry vs. Inferiority",
         "Identity vs. Confusion"
       ],
-      "correctIndex": 2,
+      "correctAnswer": "Industry vs. Inferiority",
       "explanation": "Erikson believed that school-age children need to develop a sense of competence."
     },
     {
@@ -284,7 +284,7 @@
         "Giving praise for effort",
         "Using visuals to explain"
       ],
-      "correctIndex": 1,
+      "correctAnswer": "Comparing them with another student",
       "explanation": "Comparison damages motivation and creates unnecessary pressure."
     },
     {
@@ -297,7 +297,7 @@
         "Assessing the student’s current understanding",
         "Giving a quiz"
       ],
-      "correctIndex": 2,
+      "correctAnswer": "Assessing the student’s current understanding",
       "explanation": "The tutor should first understand what the learner already knows before teaching something new."
     }
   ]

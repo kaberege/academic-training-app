@@ -20,7 +20,7 @@ export interface QuizQuestion {
   type: "multiple-choice";
   question: string;
   options: string[];
-  correctIndex: number;
+  correctAnswer: string;
   explanation: string;
 }
 
