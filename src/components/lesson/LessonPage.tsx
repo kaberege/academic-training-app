@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 import SidebarNav from "./SidebarNav";
-import Quiz from "../quiz/Quiz";
+import QuizLayout from "../quiz/QuizLayout";
 import { useLessonStore } from "../../store/lessonStore";
 import ProgressBar from "./ProgressBar";
 import OutlineBars from "./OutlineBars";
@@ -201,7 +201,7 @@ export default function LessonPage() {
             </div>
           ) : (
             <div>
-              <Quiz questions={lesson.quiz} />
+              <QuizLayout />
             </div>
           )}
         </div>

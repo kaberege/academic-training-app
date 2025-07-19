@@ -33,3 +33,21 @@ export interface LessonData {
   content: ContentBlock[];
   quiz: QuizQuestion[];
 }
+
+export interface OptionDetails {
+  question: string;
+  options: string[];
+  choosed: string;
+  correct: string;
+  explanation: string;
+}
+
+export interface QuizResultsHistory {
+  id: number;
+  correct: number;
+  questions: number;
+  scored: number;
+  spent: string;
+  date: string;
+  details: OptionDetails[];
+}
